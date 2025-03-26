@@ -20,7 +20,7 @@ This is an implementation of the **String Calculator TDD Kata** using **TypeScri
 ```
 string-calculator/
 │── src/
-|──── tests/
+|   ├──tests/
 │     ├── StringCalculator.test.ts  # Unit tests
 │   ├── StringCalculator.ts  # Main logic
 │   ├── index.ts              # Sample execution (optional)
