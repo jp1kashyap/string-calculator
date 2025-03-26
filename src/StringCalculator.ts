@@ -13,10 +13,15 @@ class StringCalculator {
     }
 
     if (numbers.indexOf(",") !== -1) {
-      return numbers
-        .split(",")
-        .map(Number)
-        .reduce((a, b) => a + b);
+      const numArray = numbers.split(",").map(Number);
+      const errors = numArray
+        .filter((num) => num < 0)
+        .map((num) => `negative numbers not allowed ${num}`);
+
+      if (errors.length > 0) {
+        throw new Error(errors.join(", "));
+      }
+      return numArray.reduce((a, b) => a + b);
     }
 
     if (parseInt(numbers) < 0) {
