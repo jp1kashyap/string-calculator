@@ -24,4 +24,8 @@ describe("String Calculator", () => {
   test("Should return sum of numbers given multiple numbers", () => {
     expect(calculator.add("1,2,3,4")).toBe(10);
   });
+
+  test("Should return sum of numbers given with new line", () => {
+    expect(calculator.add("1\n2\n3\n4")).toBe(10);
+  });
 });
