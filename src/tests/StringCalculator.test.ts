@@ -16,4 +16,12 @@ describe("String Calculator", () => {
   test("Should return number if given single number", () => {
     expect(calculator.add("1")).toBe(1);
   });
+
+  test("Should return sum of number if given two numbers", () => {
+    expect(calculator.add("1,2")).toBe(3);
+  });
+
+  test("Should return sum of numbers given multiple numbers", () => {
+    expect(calculator.add("1,2,3,4")).toBe(10);
+  });
 });
