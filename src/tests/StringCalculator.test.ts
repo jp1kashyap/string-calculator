@@ -12,4 +12,8 @@ describe("String Calculator", () => {
   test("Should return 0 for an empty string", () => {
     expect(calculator.add("")).toBe(0);
   });
+
+  test("Should return number if given single number", () => {
+    expect(calculator.add("1")).toBe(1);
+  });
 });
